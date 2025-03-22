@@ -8,7 +8,7 @@ class CategoryService:
         if not user_exists:
             return "Error - unknown user"
         
-        category_exists = self.db.fetchone("SELECT count FROM categories WHERE category = ?", (category,))
+        category_exists = self.db.fetchone("SELECT category FROM categories WHERE category = ?", (category,))
         if not category_exists:
             return "Error - category not found"
         
@@ -29,7 +29,7 @@ class CategoryService:
         if not user_exists:
             return "Error - unknown user"
 
-        self.db.execute(
+        categories = self.db.fetchall(
 
             """
             SELECT category
@@ -48,7 +48,6 @@ class CategoryService:
 
         )
 
-        categories = self.db.fetchall()
         if not categories:
             return "Error - no listings found"
         

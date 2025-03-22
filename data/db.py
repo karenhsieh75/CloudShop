@@ -18,7 +18,7 @@ class Database:
                 listing_id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT NOT NULL,
                 description TEXT NOT NULL,
-                price REAL NOT NULL,
+                price INTEGER NOT NULL,
                 category TEXT NOT NULL,
                 username TEXT NOT NULL,
                 created_at TEXT NOT NULL,
@@ -30,7 +30,14 @@ class Database:
                 category TEXT PRIMARY KEY
             );
 
+            -- Create index
             CREATE INDEX IF NOT EXISTS idx_category ON listings(category);
+
+            -- Insert and delete a dummy record to set the sequence
+            INSERT INTO listings (listing_id, title, description, price, category, username, created_at) 
+            VALUES (100000, 'dummy', 'dummy', 100, 'dummy', 'dummy', 'dummy');
+
+            DELETE FROM listings WHERE listing_id = 100000;
             """
 
         )

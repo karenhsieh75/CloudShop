@@ -6,23 +6,23 @@ CloudShop CLI is a command-line application built with Python and SQLite, allowi
 
 ```
 cloudshop/
-├── cli/                # CLI Interaction Layer (Presentation Layer)
-│   ├── main.py         # Main CLI entry point
-│   ├── commands.py     # Handles CLI commands
+├── cli/                      # CLI Interaction Layer (Presentation Layer)
+│   ├── main.py               # Main CLI entry point
+│   ├── commands.py           # Handles CLI commands
 │
-├── core/               # Business Logic Layer (Service Layer)
+├── core/                     # Business Logic Layer (Service Layer)
 │   ├── user_service.py       # Handles user-related logic
 │   ├── listing_service.py    # Handles product-related logic
 │   ├── category_service.py   # Handles category-related logic
 │
-├── data/               # Data Access Layer (Persistence Layer)
-│   ├── db.py           # SQLite database operations
+├── data/                     # Data Access Layer (Persistence Layer)
+│   ├── db.py                 # SQLite database operations
 │
-├── .gitignore          # Git ignore file
-├── run.sh              # Script to run the CLI
-├── build.sh            # Script to build the project
-├── Makefile            # Makefile for build & packaging
-└── README.md           # This document
+├── .gitignore                # Git ignore file
+├── run.sh                    # Script to run the CLI
+├── build.sh                  # Script to build the project
+├── Makefile                  # Makefile for build & packaging
+└── README.md                 # This document
 ```
 
 ### **Layered Architecture Explanation**

@@ -105,8 +105,8 @@ GET_TOP_CATEGORY
 ## **Technical Details**
 
 ### **1. Programming Environment**
-- **Python Version:** Python 3.8+
-- **Database:** SQLite (via Python’s built-in `sqlite3` module)
+- **Python Version:** Python 3.12.7
+- **Database:** SQLite 3.43.2 (via Python’s built-in `sqlite3` module)
 - **Dependencies:** No external libraries required
 
 ### **2. `GET_TOP_CATEGORY` Query Optimization**

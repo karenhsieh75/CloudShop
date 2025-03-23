@@ -1,8 +1,14 @@
 import sqlite3
+import os
+
+# 確保 data 目錄存在
+DB_DIR = 'data'
+DB_PATH = os.path.join(DB_DIR, "cloudshop.db")
+os.makedirs(DB_DIR, exist_ok=True)
 
 class Database:
-    def __init__(self, db_name="cloudshop.db"):
-        self.conn = sqlite3.connect(db_name)
+    def __init__(self):
+        self.conn = sqlite3.connect(DB_PATH)
         self.cur = self.conn.cursor()
         self._init_db()
 
